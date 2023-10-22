@@ -19,5 +19,7 @@ namespace Laborator2_MPD.Data
         public DbSet<Laborator2_MPD.Models.Publisher>? Publisher { get; set; }
 
         public DbSet<Laborator2_MPD.Models.Author>? Author { get; set; }
+
+        public DbSet<Laborator2_MPD.Models.Category>? Category { get; set; }
     }
 }
