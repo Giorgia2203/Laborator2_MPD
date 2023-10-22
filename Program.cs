@@ -1,7 +1,12 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Laborator2_MPD.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<Laborator2_MPDContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Laborator2_MPDContext") ?? throw new InvalidOperationException("Connection string 'Laborator2_MPDContext' not found.")));
 
 var app = builder.Build();
 
