@@ -21,5 +21,9 @@ namespace Laborator2_MPD.Data
         public DbSet<Laborator2_MPD.Models.Author>? Author { get; set; }
 
         public DbSet<Laborator2_MPD.Models.Category>? Category { get; set; }
+
+        public DbSet<Laborator2_MPD.Models.Borrowing>? Borrowing { get; set; }
+
+        public DbSet<Laborator2_MPD.Models.Member>? Member { get; set; }
     }
 }
