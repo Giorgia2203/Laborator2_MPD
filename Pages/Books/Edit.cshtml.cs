@@ -8,9 +8,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Laborator2_MPD.Data;
 using Laborator2_MPD.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Laborator2_MPD.Pages.Books
 {
+    [Authorize(Roles = "Admin")]
     public class EditModel : BookCategoriesPageModel
     {
         private readonly Laborator2_MPD.Data.Laborator2_MPDContext _context;
